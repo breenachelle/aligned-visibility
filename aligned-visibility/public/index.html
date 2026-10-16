@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aligned Visibility — Free SEO + AI Visibility Analyzer</title>
+  <meta name="description" content="See what search engines and AI systems can understand about your page, then fix what matters without handing your voice over to automation." />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <div class="eyebrow">ALIGNED VISIBILITY</div>
+      <h1>Can people — and machines — understand your website?</h1>
+      <p class="lede">Scan one page for search fundamentals, answerability, AI-readable context, and human quality. No keyword-stuffing scorecard. No automatic publishing.</p>
+
+      <form id="scan-form" class="scan-form">
+        <label class="sr-only" for="url">Website URL</label>
+        <input id="url" name="url" type="text" inputmode="url" placeholder="yourwebsite.com" autocomplete="url" required />
+        <button type="submit">Analyze my page</button>
+      </form>
+      <p class="microcopy">Free page scan. Recommendations are reviewed by you before anything changes.</p>
+    </header>
+
+    <section id="status" class="status hidden" aria-live="polite"></section>
+    <section id="results" class="results hidden" aria-live="polite"></section>
+  </main>
+
+  <template id="results-template">
+    <div class="result-header">
+      <div>
+        <p class="kicker">Visibility score</p>
+        <div class="score-line"><span id="overall-score"></span><span class="score-denom">/100</span></div>
+        <p id="score-copy" class="score-copy"></p>
+      </div>
+      <a id="scanned-url" class="scanned-url" target="_blank" rel="noopener noreferrer"></a>
+    </div>
+
+    <div id="score-grid" class="score-grid"></div>
+
+    <div class="section-head">
+      <div>
+        <p class="kicker">Priority recommendations</p>
+        <h2>Fix these first.</h2>
+      </div>
+      <p class="legend"><span>Detected</span> = page fact · <span>Assessment</span> = heuristic judgment</p>
+    </div>
+
+    <div id="issues" class="issues"></div>
+
+    <aside class="upgrade">
+      <div>
+        <p class="kicker">NEXT: FIX MODE</p>
+        <h2>Want help making the changes?</h2>
+        <p>The paid workflow can turn approved recommendations into editable changes, show the before/after diff, and eventually open a GitHub pull request. Nothing publishes itself.</p>
+      </div>
+      <button type="button" disabled>Fix mode coming next</button>
+    </aside>
+  </template>
+
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

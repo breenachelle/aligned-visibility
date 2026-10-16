@@ -1,0 +1,19 @@
+{
+  "name": "aligned-visibility",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Human-reviewed SEO and AI visibility analyzer MVP.",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "express": "^5.0.0"
+  }
+}
